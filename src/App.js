@@ -2,6 +2,7 @@
 // 온라인 수업 신청 시스템 - React 기반 (프론트엔드 + 백엔드 연결 + 관리자 페이지 포함)
 
 import React, { useState, useEffect } from "react";
+import "./index.css";
 
 // ✅ 수업 정보 (샘플 데이터)
 const classData = [
@@ -56,7 +57,6 @@ function ClassSignupForm() {
     const enrolled = getCurrentEnrollment(selectedClass.id);
     const isFull = enrolled >= selectedClass.capacity;
 
-    // 저장 처리
     if (!mockSubmissionDatabase[selectedClass.id]) {
       mockSubmissionDatabase[selectedClass.id] = [];
     }
